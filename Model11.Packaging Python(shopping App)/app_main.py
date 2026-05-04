@@ -72,7 +72,7 @@ def main():
             continue
 
         cart.add_item(products[choice], quantity)
-        print(f"Added {quantity} × {products[choice].name}")
+        print(f"Added {quantity} * {products[choice].name}")
 
     # --------- Checkout ---------
     print("\nChecking out...")
