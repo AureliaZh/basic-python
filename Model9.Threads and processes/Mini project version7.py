@@ -56,8 +56,7 @@ class CartItem:
 
 class ShoppingCart:
     def __init__(self):
-        self.items = []
-
+        self.items = []   
     def add_item(self, product, quantity):
         if quantity <= 0:
             raise ValueError("Quantity must be greater than zero")
@@ -78,13 +77,13 @@ class ShoppingCart:
 # Process Task
 # ===============================
 
-def checkout_process(user_name, cart, budget):
+def checkout_process(user_name, cart, budget): #takes three inputs
     print(f"[Process] {user_name} checking out...")
 
     try:
         total = cart.calculate_total()
         cart.check_budget(budget)
-        print(f"[Process] {user_name} total: ${total:.2f}")
+        print(f"[Process] {user_name} total: ${total:.2f}") #format the number to 2 decimal places
     except BudgetExceededError as e:
         print(f"[Process] {user_name} error: {e}")
 
